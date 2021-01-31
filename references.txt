@@ -1,0 +1,15 @@
+References 
+
+List of websites referenced for this assignment outside of Udacity.com. 
+
+ 
+
+https://www.kdnuggets.com/2020/01/guide-precision-recall-confusion-matrix.html 
+
+https://www.britannica.com/event/Enron-scandal 
+
+https://scikit-learn.org/ 
+
+https://stackoverflow.com/questions/32701649/how-to-get-the-scores-of-each-feature-from-sklearn-feature-selection-selectkbest 
+
+https://towardsdatascience.com/how-to-tune-a-decision-tree-f03721801680 
