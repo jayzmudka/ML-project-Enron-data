@@ -1,0 +1,12 @@
+(lp0
+S'poi'
+p1
+aS'total_payments'
+p2
+aS'from_messages'
+p3
+aS'bonus'
+p4
+aS'expenses'
+p5
+a.
