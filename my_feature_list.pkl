@@ -3,10 +3,10 @@ S'poi'
 p1
 aS'total_payments'
 p2
-aS'from_messages'
-p3
 aS'bonus'
-p4
+p3
 aS'expenses'
+p4
+aS'from_messages'
 p5
 a.

@@ -61,8 +61,8 @@ def convNaN(feature): #helper to convert NaN's to zeros
     
 ### Task 1: Select what features you'll use.
 ### features_list is a list of strings, each of which is a feature name.
-### The first feature must be "poi".
-features_list = ['poi', 'total_payments', 'from_messages', 'bonus', 'expenses'] # My guessed features
+### The first feature must be "poi". 
+features_list = ['poi', 'total_payments', 'bonus', 'expenses', 'from_messages'] # My guessed features
 
 #Here are all the features available. I tried them with SelectKBest by using the list below
 '''features_list = ['poi', 'salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus',
@@ -186,7 +186,7 @@ labels, features = targetFeatureSplit(data)
 #clf = GaussianNB() #accuracy .82, precision .07, bad recall .014
 
 from sklearn.tree import DecisionTreeClassifier
-clf = DecisionTreeClassifier(max_features = 4, min_weight_fraction_leaf = .007, min_impurity_decrease = .001,
+clf = DecisionTreeClassifier( min_samples_leaf = 1, min_impurity_decrease = .001,
     min_samples_split = 2) #accuracy .74, precision 0.17, recall 0.17 before adding features, tuning
 
 #from sklearn.svm import SVC
@@ -217,14 +217,14 @@ features_train, features_test, labels_train, labels_test = \
 # I tried using SelectKBest feature selection here but got unacceptable results 
 '''from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_classif
-selection_clf = SelectKBest( k = 10)
+selection_clf = SelectKBest(k = 10)
 selection_clf.fit_transform(features_train, labels_train)
 print selection_clf.scores_'''
 
 
 clf.fit(features_train, labels_train) 
 
-# selection_clf.transform(features_test) #applied SelectKBest to test set
+#selection_clf.transform(features_test) #applied SelectKBest to test set
 print '\n', clf.score(features_test, labels_test), 'score'
 
 
